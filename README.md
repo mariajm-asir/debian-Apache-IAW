@@ -1,4 +1,4 @@
-# Práctica de aula: Docker y Apache
+<img width="1153" height="237" alt="image" src="https://github.com/user-attachments/assets/321ebc7f-7ac4-4643-af8d-0e720375aec4" /># Práctica de aula: Docker y Apache
 
 Este documento detalla todos los pasos seguidos para completar la práctica de Docker y Apache utilizando contenedores, Dockerfile y Docker Compose.
 
@@ -49,10 +49,7 @@ Se comprobó el correcto funcionamiento accediendo a la URL correspondiente desd
 Se comprobó la accesibilidad de la página utilizando el navegador web en modo texto dentro del contenedor:
 elinks http://localhost/Maria.html
 <img width="1377" height="322" alt="image" src="https://github.com/user-attachments/assets/cb0294b9-9866-49e0-a9bc-09b1866d3b1e" />
-
-
-
-
+<img width="1385" height="308" alt="image" src="https://github.com/user-attachments/assets/bc8ec0db-fbc0-42cb-8a35-9b17cf3e5d99" />
 
 # 9. Crear el fichero Dockerfile para automatizar los pasos
 Se creó un fichero `Dockerfile` en la máquina host con las siguientes instrucciones para automatizar la instalación y despliegue:
@@ -63,20 +60,25 @@ RUN apt update && apt install -y apache2
 COPY Maria.html /var/www/html/Maria.html
 EXPOSE 80
 CMD ["apache2ctl", "-D", "FOREGROUND"]
+<img width="1147" height="312" alt="image" src="https://github.com/user-attachments/assets/87fd6d90-5f77-44a7-9054-77fd6cf7b1c5" />
 
-## 10. Crear la imagen a partir del Dockerfile
+# 10. Crear la imagen a partir del Dockerfile
 Se construyó la imagen personalizada utilizando el comando `docker build`:
 
 docker build -t maria-debian-apache .
+<img width="1152" height="422" alt="image" src="https://github.com/user-attachments/assets/a71c6e54-6124-4b01-971f-d402655323dd" />
 
 # 11. Ejecutar el contenedor basado en la nueva imagen
 Se levantó un contenedor utilizando la imagen generada por el Dockerfile:
+<img width="1153" height="237" alt="image" src="https://github.com/user-attachments/assets/b6e9bab0-a11a-45c4-9149-8d676d37ed90" />
 
 docker run -d -p 8080:80 --name apache-desde-dockerfile maria-debian-apache
+<img width="1168" height="93" alt="image" src="https://github.com/user-attachments/assets/227731ae-7455-4ae4-a2ef-a229d40e5492" />
 
 # 12. Comando que copia un archivo local a un contenedor
 Se utilizó el comando `docker cp` para transferir un fichero HTML local directamente al contenedor en marcha:
 docker cp Maria.html mi-contenedor-apache-maria:/var/www/html/Maria.html
+<img width="1181" height="77" alt="image" src="https://github.com/user-attachments/assets/72bd8bff-72ce-4085-b340-a5b245059a8f" />
 
 # 13. Crear el fichero docker-compose.yml
 Se creó un fichero `docker-compose.yml` para automatizar el arranque de Apache asociando un volumen local que mapea la carpeta raíz de los documentos HTML:
@@ -93,6 +95,8 @@ services:
 # 14. Ejecutar el entorno con Docker Compose
 Se arrancó el servicio mediante Docker Compose en segundo plano:
 docker compose up -d
+<img width="1562" height="275" alt="image" src="https://github.com/user-attachments/assets/51e55b76-ae2b-4cbc-bcac-5e8b3675592a" />
+
 
 
 
