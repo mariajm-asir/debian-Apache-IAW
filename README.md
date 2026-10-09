@@ -1,3 +1,4 @@
+Práctica de aula: Docker y Apache
 Este documento detalla todos los pasos seguidos para completar la práctica de Docker y Apache utilizando contenedores, Dockerfile y Docker Compose.
 
 # 1. Descargar la imagen de Debian
