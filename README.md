@@ -1,12 +1,11 @@
 # Práctica de aula: Docker y Apache
 
 Este documento detalla todos los pasos seguidos para completar la práctica de Docker y Apache utilizando contenedores, Dockerfile y Docker Compose.
-<img width="1897" height="960" alt="image" src="https://github.com/user-attachments/assets/550abcff-1959-439f-a615-9eda5c0b6c77" />
-
 
 # 1. Descargar la imagen de Debian
 Se ha descargado la imagen oficial de Debian desde el Docker Hub:
 docker pull debian
+<img width="1897" height="960" alt="image" src="https://github.com/user-attachments/assets/550abcff-1959-439f-a615-9eda5c0b6c77" />
 
 # 2. Arrancar el contenedor interactivo en segundo plano
 Se ha arrancado un contenedor de Debian en modo interactivo (`-it`) y en segundo plano (`-d`), asignándole un nombre y mapeando el puerto 8080 del host con el puerto 80 del contenedor:
