@@ -1,4 +1,4 @@
-Práctica de aula: Docker y Apache
+# Práctica de aula: Docker y Apache
 
 Este documento detalla todos los pasos seguidos para completar la práctica de Docker y Apache utilizando contenedores, Dockerfile y Docker Compose.
 
