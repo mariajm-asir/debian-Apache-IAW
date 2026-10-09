@@ -1,0 +1,9 @@
+services:
+  web:
+    image: maria-debian-apache:latest
+    container_name: apache-maria-compose
+    ports:
+      - "8082:80"
+    volumes:
+      - ./html_local:/var/www/html
+   
